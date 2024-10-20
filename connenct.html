@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Website</title>
+    <link rel="stylesheet" href="co.css">
+</head>
+<body>
+    <h1>Welcome to Your Pet Care Website!</h1>
+
+    <div class="tabs">
+        <div class="tab" id="miniGamesTab" onclick="showTab('miniGames')">Mini-Games Hub</div>
+        <div class="tab" id="socialFeaturesTab" onclick="showTab('socialFeatures')">Connect with Friends</div>
+    </div>
+
+    <div class="tab-content">
+        <div id="miniGames" class="tab-pane">
+            <h2>Mini-Games Hub</h2>
+            <div class="games-grid">
+                <a href="https://www.boomerangtv.co.uk/games/tom-and-jerry-backyard-hoops" class="game-tile">Game 1</a>
+                <a href="https://www.boomerangtv.co.uk/games/tom-and-jerry-food-thief" class="game-tile">Game 2</a>
+                <a href="https://www.boomerangtv.co.uk/games/looney-tunes-cartoons-dig-it" class="game-tile">Game 3</a>
+                <a href="https://www.boomerangtv.co.uk/games/grizzy-and-the-lemmings-world-tour-jigsaw-puzzle" class="game-tile">Game 4</a>
+            </div>
+        </div>
+
+        <div id="socialFeatures" class="tab-pane" style="display:none;">
+            <h2>Connect with Friends</h2>
+            <div class="social-grid">
+                <a href="https://talkingtomandfriends.com/talking-angela" class="friend">Friend 1</a>
+                <a href="https://talkingtomandfriends.com/talking-hank" class="friend">Friend 2</a>
+                <a href="https://talkingtomandfriends.com/talking-becca" class="friend">Friend 3</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="co.js"></script>
+</body>
+</html>

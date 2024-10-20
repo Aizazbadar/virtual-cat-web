@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="practice .css"> <!-- Ensure correct CSS file path -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="announcement-bar">
+        <div class="fixed-text">Announcement |</div>
+        <div class="marquee">
+            <div class="marquee-content">
+                Dog Training Workshop - 5th August || BOOT CAMP 20th JULY || Dog Show 10th August
+            </div>
+        </div>
+    </div>
+    <div class="logobox">
+        <div class="logo">
+            <span class="logo-text">Dogiverse</span>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <input type="checkbox" id="chk1">
+        <label for="chk1" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </label>
+        <ul class="menu-items">
+            <li><a href="main.html"><span>Home</span></a></li>
+            <li class="dropdown">
+                <a href="about.html"><span>About</span> <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="p2.html"><span>Play</span></a></li>
+                    <li><a href="team.html"><span>Team</span></a></li>
+                    <li><a href="vision.html"><span>Vision & Mission</span></a></li>
+                    <li><a href="contact.html"><span>Get In Touch</span></a></li>
+                </ul>
+            </li>
+            <li><a href="m.html"><span>Chat</span></a></li>
+            <li><a href="p2.html"><span>Play</span></a></li>
+            <li><a href="incubatihub.html"><span>Portfolio</span></a></li>
+            <li class="dropdown">
+                <a href="connenct.html"><span>Services</span> <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#"><span>Facilities</span></a></li>
+                    <li><a href="galle.html"><span>Gallery</span></a></li>
+                    <li><a href="service.html"><span>Services</span></a></li>
+                    <li><a href="#"><span>Blog</span></a></li>
+                    <li><a href="#"><span>CSS</span></a></li>
+                    <li><a href="#"><span>JavaScript</span></a></li>
+                </ul>
+            </li>
+            <li><a href="updates.html"><span>Updates</span></a></li>
+        </ul>
+    </header>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <video autoplay loop muted class="fullscreen-video"> <!-- Autoplay, loop, and muted attributes added -->
+            <source src="WhatsApp Video 2024-10-20 at 6.53.25 PM.mp4" type="video/mp4"> <!-- Replace with your video file -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container">
+        <h1>Are you ready to play?</h1>
+        <div class="button-container">
+            <button class="play-button" onclick="startGame()">Yes!</button>
+        </div>
+    </div>
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+              
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html" target="_blank">Play</a></li>
+                    <li><a href="https://www.google.com/maps/place/NITK+STEP/@13.0152807,74.7916241,15z/data=!4m6!3m5!1s0x3ba3520d8fffbf0d:0x9ca85e177f873fd2!8m2!3d13.0152807!4d74.7916241!16s%2Fg%2F11c2r3n25s?entry=ttu">Campus map</a></li>
+                </ul>
+            </nav>
+            <div class="footer-info">
+                <div class="footer-column">
+                    <!-- Optional content for services or other information -->
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="tel:+91-824-2474000">+1 234 567 89</a></li>
+                        <li><a href="mailto:info@yourcompany.com">step@.edu.in</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024  Entrepreneurs' Park. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="practice.js"></script>
+</body>
+</html>

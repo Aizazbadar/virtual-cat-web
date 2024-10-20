@@ -1,0 +1,73 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2; /* Slightly darker for contrast */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s; /* Added transform for effect */
+    border-radius: 5px;
+    margin: 0 5px; /* Space between tabs */
+}
+
+.tab:hover {
+    background: linear-gradient(135deg, #0056b3, #003d7a); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.tab-content {
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: box-shadow 0.3s; /* Transition for shadow */
+}
+
+.tab-content:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.tab-pane {
+    display: none;
+}
+
+.games-grid,
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px; /* Increased gap for better spacing */
+}
+
+.game-tile, .friend {
+    padding: 15px;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s; /* Added transform for effect */
+}
+
+.game-tile:hover, .friend:hover {
+    background: linear-gradient(135deg, #0056b3, #003d7a); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Dog Avatar</title>
+    <link rel="stylesheet" href="p2.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="battery-container">
+            <div class="battery">
+                <div class="battery-level" id="batteryLevel"></div>
+                <div class="battery-text" id="batteryText">100%</div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="dog" id="dog">
+                <img src="default.gif" alt="Virtual Dog" id="dogImage">
+            </div>
+            <div class="button-grid">
+                <button onclick="playGif('dance1')">Dance 1</button>
+                <button onclick="playGif('dance2')">Dance 2</button>
+                <button onclick="playGif('lost')">Get Lost</button>
+                <button onclick="playGif('lonely')">Lonely</button>
+                <button onclick="playGif('exercise1')">Exercise 1</button>
+                <button onclick="playGif('partner')">My Partner</button>
+                <button onclick="playGif('timeToGo')">Time to Go</button>
+                <button onclick="playGif('shy')">Shy</button>
+                <button onclick="playGif('feed')">Feed</button>
+                <button onclick="playGif('play')">Play</button>
+            </div>
+        </div>
+
+        <div class="counters">
+            <div class="counter">
+                <h3>Happiness</h3>
+                <p id="happinessCount">50</p>
+            </div>
+            <div class="counter">
+                <h3>Tired</h3>
+                <p id="tiredCount">50</p>
+            </div>
+            <div class="counter">
+                <h3>Bored</h3>
+                <p id="boredCount">50</p>
+            </div>
+            <div class="counter">
+                <h3>Enjoying</h3>
+                <p id="enjoyingCount">50</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="p2.js"></script>
+</body>
+</html>

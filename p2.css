@@ -1,0 +1,268 @@
+/* General Styles */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Battery Styles */
+.battery-container {
+    width: 100px; /* Width of the battery container */
+    margin-right: 20px; /* Space between battery and dog tab */
+}
+
+.battery {
+    width: 100%; /* Full width */
+    height: 200px; /* Height of the battery */
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    position: relative; /* For positioning the battery level */
+    background: #fff; /* Background color */
+}
+
+.battery-level {
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+    background: #4CAF50; /* Initial battery color */
+    border-radius: 8px; /* Rounded corners */
+    transition: height 0.2s ease; /* Smooth transition */
+}
+
+.battery-text {
+    position: absolute; /* Positioning for text */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    font-weight: bold; /* Bold text */
+    font-size: 16px; /* Text size */
+}
+
+/* Container Styles */
+.container {
+    width: 600px; /* Width of the rectangular box */
+    height: 75vh; /* Height of the rectangular box */
+    background-color: #fff; /* White background */
+    border: 2px solid #4CAF50; /* Green border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 20px; /* Space around the container */
+}
+
+/* Button Grid Styles */
+.button-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    justify-content: center; /* Center buttons */
+    margin-top: 20px; /* Space above buttons */
+}
+
+/* Button Styles */
+.button-grid button {
+    padding: 15px 20px; /* Increased padding for bigger buttons */
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #E0E0E0; /* Light grey background for buttons */
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 5px; /* Margin between buttons */
+    transition: background-color .3s ease, transform .2s ease; /* Smooth transition */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* For pseudo-element positioning */
+}
+
+/* Button Hover Effects */
+.button-grid button:active {
+    transform: scale(0.96);
+}
+
+.button-grid button:before,
+.button-grid button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+
+.button-grid button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+        10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+            40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+            50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+            50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.button-grid button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+/* Increase width and height of the counters container */
+.counters {
+    display: flex;
+    flex-direction: column; /* Stack counters vertically */
+    margin-left: 50px; /* Space between dog tab and counters */
+    width: 250px; /* Adjust width as needed */
+    height: 400px; /* Increase height as needed */
+}
+
+/* Modify the counter styles for better appearance */
+.counter {
+    margin-bottom: 10px; /* Space between counters */
+    text-align: center; /* Center text in counters */
+    background: #fff; /* White background for counter */
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Increase padding inside counter */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+   
+}
+h3{
+    font-size: 25px;
+}
+p{
+
+    font-size: 20px;
+}
+
+/* Optional: Add a hover effect to the counters */
+.counter:hover {
+    transform: translateY(-5px); /* Lift the counter slightly on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Optional: Add a hover effect to the counters */
+.counter:hover {
+    transform: translateY(-5px); /* Lift the counter slightly on hover */
+}
+
+/* Optional: Add a hover effect to the counters */
+.counter:hover {
+    transform: translateY(-5px); /* Lift the counter slightly on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.mini-games, .social-features {
+    flex: 1; /* Allow each section to take equal space */
+    margin: 20px; /* Add space around each section */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Ensure minimum width */
+}
+
+.mini-games h2, .social-features h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.games-grid, .social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.game-tile, .friend {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.game-tile:hover, .friend:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack the sections on smaller screens */
+    }
+
+    .games-grid, .social-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
